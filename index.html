@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matico Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sofia&display=swap" rel="stylesheet">
+
+    <style>
+
+body {
+
+  background-color: #E2E1CF;
+}
+
+.hidden {
+  display: none;
+}
+
+#mainContainer {
+  width: 980px;
+  height: 1000px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #E2E1CF;
+  padding: 20px;
+  position: relative;
+  align-items: center;
+}
+
+
+h1 {
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  line-height: 30px;
+  font-size: 70px;
+  color: #8F8F67;
+}
+
+h2 {
+  font-family: Sofia, sans-serif;
+  font-size: 50px;
+  line-height: 20px;
+  color: #5fbdd4;
+}
+
+p {
+  font-family: Franklin Gothic, sans-serif;
+  font-size: 15px;
+}
+
+#slideContainer{
+  position: relative;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+
+}
+
+.slide{
+  width: 980px;
+  position: absolute;
+}
+
+.imageBox {
+  position: relative;
+}
+
+.image {
+  display: block;
+}
+
+.imgText {
+  width: 400px;
+  display: block;
+  position: absolute;
+  top: 130px;
+  left: 70px;
+}
+
+#linksContainer{
+  width: 980px;
+  position: relative;
+  margin-top: 570px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkImage {
+  display: block;
+  opacity: 50%;
+}
+
+.linkImage:hover {
+  opacity: 100%;
+}
+
+#linksButton{
+
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #5fbdd4;
+
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+
+}
+
+.linksButton:hover{
+  opacity: 50%;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <section id="mainContainer">
+    <div id="headerTitle">
+      <h1>MEET OUR TEAM!</h1>
+    </div>
+
+    <div id="slideContainer">
+      <h2 class="hidden">Slide Container</h2>
+
+      <div class="slide">
+        <div class="imageBox">
+          <img src="images/team_nat_hi.jpg" class="image">
+          <div class="imgText">
+            <h2>Natalia Pabon </h2>
+            <p>Graphic Designer, has been in charge of creating the brand language that characterizes MATICO with a fresh, modern and innovative image, a pleasant and easy to navigate online store so that each visit to our site becomes your best experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="imageBox">
+          <img src="images/team_soni_hi.jpg" class="image">
+          <div class="imgText">
+            <h2>Sonia Viteri</h2>
+            <p>Founder and CEO of MATICO, she is the mind behind each elaborated product, a perfectionist by conviction, always looking to innovate and offer the best quality and set trends in the industry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="linksContainer">
+      <h2 class="hidden">Links Container</h2>
+      <div class="links"><img src="images/team_nat_low.jpg" class="linkImage">
+      </div>
+
+      <div class="links"><img src="images/team_soni_low.jpg" class="linkImage">
+      </div>
+
+      <div id="linksButton"><a href="#" id="swapbutton">next</a></div>
+
+    </div>
+  </section>
+<script>
+
+
+let slide = document.querySelectorAll('.slide');
+let btn = document.querySelector('#swapbutton');
+
+slide[1].classList.add("hidden");
+
+function showHide() {
+  if(slide[1].classList.contains("hidden")) {
+    slide[0].classList.add("hidden");
+    slide[1].classList.remove("hidden");
+  }
+
+  else if(panels[0].classList.contains("hidden")){
+    slide[1].classList.add("hidden");
+    slide[0].classList.remove("hidden");
+  }
+}
+
+btn.addEventListener("click",showHide,false);
+
+</script>
+</body>
+</html>
