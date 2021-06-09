@@ -1,5 +1,5 @@
 ## Team project
-This project contains a pice of last term FIP (the team) for JS homework.
+This project contains a piece of last term FIP (the team) for JS homework.
 
 
 2nd term - Summer semester 2021
