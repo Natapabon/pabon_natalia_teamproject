@@ -3,3 +3,129 @@
 	display: none;
 
 }
+
+body {
+
+  background-color: #E2E1CF;
+}
+
+.hidden {
+  display: none;
+}
+
+#mainContainer {
+  width: 980px;
+  height: 1000px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #E2E1CF;
+  padding: 20px;
+  position: relative;
+  align-items: center;
+}
+
+
+h1 {
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  line-height: 30px;
+  font-size: 70px;
+  color: #8F8F67;
+}
+
+h2 {
+  font-family: Sofia, sans-serif;
+  font-size: 50px;
+  line-height: 20px;
+  color: #5fbdd4;
+}
+
+p {
+  font-family: Franklin Gothic, sans-serif;
+  font-size: 15px;
+}
+
+#slideContainer{
+  position: relative;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+
+}
+
+.slide{
+  width: 980px;
+  position: absolute;
+}
+
+.imageBox {
+  position: relative;
+}
+
+.image {
+  display: block;
+}
+
+.imgText {
+  width: 400px;
+  display: block;
+  position: absolute;
+  top: 130px;
+  left: 70px;
+}
+
+#linksContainer{
+  width: 980px;
+  position: relative;
+  margin-top: 570px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkImage {
+  display: block;
+  opacity: 50%;
+}
+
+.linkImage:hover {
+  opacity: 100%;
+}
+
+#linksButton{
+
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #5fbdd4;
+
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+
+}
+
+.linksButton:hover{
+  opacity: 50%;
+}

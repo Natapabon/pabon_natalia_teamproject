@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matico Team</title>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sofia&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+
+    </style>
+</head>
+<body>
+
+  <section id="mainContainer">
+    <div id="headerTitle">
+      <h1>MEET OUR TEAM!</h1>
+    </div>
+
+    <div id="slideContainer">
+      <h2 class="hidden">Slide Container</h2>
+
+      <div class="slide">
+        <div class="imageBox">
+          <img src="images/team_nat_hi.jpg" class="image">
+          <div class="imgText">
+            <h2>Natalia Pabon </h2>
+            <p>Graphic Designer, has been in charge of creating the brand language that characterizes MATICO with a fresh, modern and innovative image, a pleasant and easy to navigate online store so that each visit to our site becomes your best experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="imageBox">
+          <img src="images/team_soni_hi.jpg" class="image">
+          <div class="imgText">
+            <h2>Sonia Viteri</h2>
+            <p>Founder and CEO of MATICO, she is the mind behind each elaborated product, a perfectionist by conviction, always looking to innovate and offer the best quality and set trends in the industry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="linksContainer">
+      <h2 class="hidden">Links Container</h2>
+      <div class="links"><img src="images/team_nat_low.jpg" class="linkImage">
+      </div>
+
+      <div class="links"><img src="images/team_soni_low.jpg" class="linkImage">
+      </div>
+
+      <div id="linksButton"><a href="#" id="swapbutton">next</a></div>
+
+    </div>
+  </section>
+<script>
+
+
+let slide = document.querySelectorAll('.slide');
+let btn = document.querySelector('#swapbutton');
+
+slide[1].classList.add("hidden");
+
+function showHide() {
+  if(slide[1].classList.contains("hidden")) {
+    slide[0].classList.add("hidden");
+    slide[1].classList.remove("hidden");
+  }
+
+  else if(panels[0].classList.contains("hidden")){
+    slide[1].classList.add("hidden");
+    slide[0].classList.remove("hidden");
+  }
+}
+
+btn.addEventListener("click",showHide,false);
+
+</script>
+</body>
+</html>
